@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    
+    <style>
+        main{
+            background-color: pink;
+            min-width: 100vw;
+            min-height: 100vh;
+
+        }
+        .main_body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .button-container button{
+            margin: 0 10px;
+        }
+        #btn2{
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="main_body">
+                <img src="./img/question.gif" id="image">
+                <p class="fs-2 text-dark">Will you go on a date with me toto ji ?</p>
+                <div class="button-container">
+                    <button class="btn btn-primary" id="btn">Yes</button>
+                    <button class="btn btn-secondary" id="btn2">No</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const btn = document.querySelector('#btn');
+        const btn2 = document.querySelector('#btn2');
+        const p = document.querySelector('p');
+        // var count = 3;
+        btn2.addEventListener('mouseover' , () => {
+            console.log('hello');
+            btn2.style.left = Math.random() * 100 + '%';
+            btn2.style.top = Math.random() * 100 + '%';
+            // count--
+            
+        })
+        btn.addEventListener('click' , () => {
+            console.log('hello')
+            document.getElementById('image').src = './img/yes.gif';
+            document.getElementById('btn').style.display = 'none';
+            document.getElementById('btn2').style.display = 'none';
+            document.querySelector('p').innerHTML = 'Hehe';
+        })
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
